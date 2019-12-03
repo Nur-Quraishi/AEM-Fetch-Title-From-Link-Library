@@ -19,7 +19,7 @@ import java.rmi.ServerException;
 
 @Component(service = Servlet.class,
         property = {
-                Constants.SERVICE_DESCRIPTION + "=Tag Servlet",
+                Constants.SERVICE_DESCRIPTION + "=Fetch Link Title Servlet",
                 "sling.servlet.methods=" + HttpConstants.METHOD_GET,
                 "sling.servlet.paths=" + "/bin/public/myProject/fetch-link-Title",
         })
