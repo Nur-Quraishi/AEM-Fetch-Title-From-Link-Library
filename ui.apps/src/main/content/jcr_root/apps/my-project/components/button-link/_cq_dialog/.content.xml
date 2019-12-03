@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Link &amp; Button"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[my-project.link-to-title]"
+          mode="edit">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <label
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            class="link-to-title-target"
+                            fieldLabel="Label"
+                            value=""
+                            name="./label"/>
+
+                    <linkTo
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                            fieldLabel="Link to"
+                            class="cq-dialog-link-to-title"
+                            cq-dialog-link-to-title-target=".link-to-title-target"
+                            name="./linkTo"
+                            rootPath="/content"
+                            value=""/>
+
+                    <targetType
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Target Type"
+                            name="./targetType">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sameTab
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="Same Tab"
+                                    value="_self"/>
+                            <newTab
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New Tab"
+                                    value="_blank"/>
+                        </items>
+                    </targetType>
+
+                    <link-or-button
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            class="cq-dialog-dropdown-showhide"
+                            cq-dialog-dropdown-showhide-target=".text-image-hide-show"
+                            fieldLabel="Link or Button"
+                            name="./linkOrButton"
+                            required="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <link
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Link"
+                                    value="link"/>
+                            <button
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Button"
+                                    value="button"/>
+                        </items>
+                    </link-or-button>
+
+                    <link-section
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            class="hide text-image-hide-show"
+                            showhidetargetvalue="link">
+                        <items jcr:primaryType="nt:unstructured">
+                            <link-type
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Link Type"
+                                    name="./linkType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <link
+                                            jcr:primaryType="nt:unstructured"
+                                            selected="{Boolean}true"
+                                            text="Link"
+                                            value="link"/>
+                                    <next
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Next"
+                                            value="next"/>
+                                    <arrow
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Arrow"
+                                            value="arrow"/>
+                                    <download
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Download"
+                                            value="download"/>
+                                    <booklet
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Booklet"
+                                            value="booklet"/>
+                                    <list
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - List"
+                                            value="list"/>
+                                    <videos
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Videos"
+                                            value="videos"/>
+                                    <pill
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Pill"
+                                            value="pill"/>
+                                    <report
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Link - Report"
+                                            value="report"/>
+                                </items>
+                            </link-type>
+                        </items>
+                    </link-section>
+
+                    <button-section
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            class="hide text-image-hide-show"
+                            showhidetargetvalue="button">
+
+                        <items jcr:primaryType="nt:unstructured">
+                            <button-type
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Button Type"
+                                    name="./buttonType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <button
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Button"
+                                            value=""/>
+                                    <next
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Button - Next"
+                                            value="next"/>
+                                </items>
+                            </button-type>
+
+                            <button-color
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                    fieldLabel="Button Color"
+                                    class="cq-dialog-dropdown-showhide"
+                                    cq-dialog-dropdown-showhide-target=".button-color-hide-show"
+                                    name="./buttonColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default
+                                            jcr:primaryType="nt:unstructured"
+                                            selected="{Boolean}true"
+                                            text="Default"
+                                            value="btn-hcp"/>
+                                    <gastro
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Gastro"
+                                            value="btn-gastro"/>
+                                    <rheuma
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Rheuma"
+                                            value="btn-rheuma"/>
+
+                                    <derma
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Derma"
+                                            value="btn-derma"/>
+
+                                    <pharma
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Pharma"
+                                            value="btn-pharma"/>
+                                    <custom
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Custom"
+                                            value="custom"/>
+                                </items>
+                            </button-color>
+                            <custom-button-color
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/container"
+                                    class="hide button-color-hide-show"
+                                    showhidetargetvalue="custom">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <color
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldLabel="Button Color (Hex Code)"
+                                            name="./button_color_hex"
+                                            value=""
+                                    />
+                                </items>
+                            </custom-button-color>
+
+                            <button-size
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Button Size"
+                                    name="./buttonSize">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <automatic
+                                            jcr:primaryType="nt:unstructured"
+                                            selected="{Boolean}true"
+                                            text="Automatic"
+                                            value=""/>
+                                    <fullWidth
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Full Width"
+                                            value="w-100"/>
+                                </items>
+                            </button-size>
+                        </items>
+                    </button-section>
+
+                    <text-color
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldLabel="Text Color"
+                            name="./textColor">
+                        <items jcr:primaryType="nt:unstructured">
+                            <blue
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="Dark Blue"
+                                    value="text-primary"/>
+                            <mid-blue
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="Mid Blue"
+                                    value="text-secondary"/>
+                            <white
+                                    jcr:primaryType="nt:unstructured"
+                                    text="White"
+                                    value="text-white"/>
+                        </items>
+                    </text-color>
+
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
