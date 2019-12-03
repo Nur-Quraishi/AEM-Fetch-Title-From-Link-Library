@@ -1,0 +1,35 @@
+<sly data-sly-use.formattedLink="${'com.abbvie.pro.core.components.use.LinkFormatterUse' @ link=properties.linkTo }"/>
+<!--/*<div class="button-link section">*/-->
+<sly data-sly-test="${properties.linkOrButton == 'button'}">
+    <sly data-sly-test="${properties.buttonColor == 'custom'}">
+        <sly data-sly-test.color="${['background-color', properties.button_color_hex] @ join=':'}"/>
+    </sly>
+    <a
+            class="btn ${properties.buttonColor != 'custom' ? properties.buttonColor : ''} ${properties.buttonSize} ${properties.textColor}"
+            data-sly-attribute.data-type="${properties.buttonType ? properties.buttonType : ''}"
+            href="${formattedLink.url || '#'}"
+            target="${properties.targetType}"
+            title="${properties.label}"
+            style="${color ? color : '' @ context='styleString'}"
+    >
+        ${properties.label}
+    </a>
+</sly>
+
+<sly data-sly-test="${properties.linkOrButton == 'link'}">
+    <a
+            class="btn-link ${properties.textColor}"
+            data-sly-attribute.data-type="${properties.linkType ? properties.linkType : ''}"
+            href="${formattedLink.url || '#'}"
+            target="${properties.targetType}"
+            title="${properties.label}"
+    >
+        ${properties.label}
+    </a>
+</sly>
+
+<sly data-sly-test="${!properties.label && wcmmode.edit}">
+    <span>Add Link/Button</span>
+</sly>
+
+<!--/*</div>*/-->
