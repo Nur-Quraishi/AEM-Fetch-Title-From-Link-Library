@@ -1,4 +1,4 @@
-package com.my.project.core.servlets;
+package com.myProject.core.servlets;
 
 /**
  * Created by IntelliJ IDEA.
