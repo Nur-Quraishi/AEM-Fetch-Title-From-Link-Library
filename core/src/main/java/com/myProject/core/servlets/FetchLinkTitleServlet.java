@@ -1,4 +1,4 @@
-package com.abbvie.pro.core.servlets;
+package com.my.project.core.servlets;
 
 /**
  * Created by IntelliJ IDEA.
@@ -26,7 +26,7 @@ import javax.servlet.Servlet;
         property = {
                 Constants.SERVICE_DESCRIPTION + "=Fetch Link Title Servlet",
                 "sling.servlet.methods=" + HttpConstants.METHOD_GET,
-                "sling.servlet.paths=" + "/bin/public/myProject/fetch-link-Title",
+                "sling.servlet.paths=" + "/com/myProject/fetch-link-Title",
         })
 public class FetchLinkTitleServlet extends SlingAllMethodsServlet {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
