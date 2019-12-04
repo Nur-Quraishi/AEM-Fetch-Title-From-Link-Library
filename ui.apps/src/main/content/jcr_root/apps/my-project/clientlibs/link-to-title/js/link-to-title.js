@@ -37,7 +37,7 @@
 
         if(value){
             $.ajax({
-                url: '/bin/public/abbvie-pro/fetch-link-Title',
+                url: '/com/my-project/fetch-link-Title',
                 type: 'GET',
                 data: {
                     'link' : value
