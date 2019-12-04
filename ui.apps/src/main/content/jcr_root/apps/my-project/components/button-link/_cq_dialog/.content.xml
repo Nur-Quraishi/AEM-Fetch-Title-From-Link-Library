@@ -160,25 +160,25 @@
                                             jcr:primaryType="nt:unstructured"
                                             selected="{Boolean}true"
                                             text="Default"
-                                            value="btn-hcp"/>
-                                    <gastro
+                                            value="btn-primary"/>
+                                    <orange
                                             jcr:primaryType="nt:unstructured"
-                                            text="Gastro"
-                                            value="btn-gastro"/>
-                                    <rheuma
+                                            text="Orange"
+                                            value="btn-secondary"/>
+                                    <red
                                             jcr:primaryType="nt:unstructured"
-                                            text="Rheuma"
-                                            value="btn-rheuma"/>
+                                            text="Red"
+                                            value="btn-danger"/>
 
-                                    <derma
+                                    <dark
                                             jcr:primaryType="nt:unstructured"
-                                            text="Derma"
-                                            value="btn-derma"/>
+                                            text="Black"
+                                            value="btn-dark"/>
 
-                                    <pharma
+                                    <light
                                             jcr:primaryType="nt:unstructured"
-                                            text="Pharma"
-                                            value="btn-pharma"/>
+                                            text="White"
+                                            value="btn-light"/>
                                     <custom
                                             jcr:primaryType="nt:unstructured"
                                             text="Custom"
